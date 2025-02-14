@@ -40,7 +40,7 @@ echo "Hello, Mercurial" > file.txt
 hg add file.txt
 hg commit -m "Added file.txt"
 ```
-📸 <img src="images/check version and init.png.png" alt="Mercurial Setup" width="500">
+📸 <img src="images/check version and init.png" alt="Mercurial Setup" width="500">
 
 
 ### 2️⃣ **Branching & Merging**
@@ -68,7 +68,7 @@ svn checkout file:///D:/svn D:\svn_working_copy
 cd D:\svn_working_copy
 ```
 📸 <img src="images/svn version.png" alt="Mercurial Setup" width="500">
-<img src="images/svn checkout.png.png" alt="Mercurial Setup" width="500">
+<img src="images/svn checkout.png" alt="Mercurial Setup" width="500">
 
 
 ### 2️⃣ **Adding & Committing a File**
@@ -84,7 +84,7 @@ svn commit -m "Added file.txt"
 foreach ($dir in @("trunk", "branches", "tags")) { mkdir $dir }
 svn commit -m "Created SVN directory structure"
 ```
-📸 <img src="images/snv branch.png.png" alt="Mercurial Setup" width="500">
+📸 <img src="images/snv branch.png" alt="Mercurial Setup" width="500">
 
 
 ### 4️⃣ **Branching & Merging**
