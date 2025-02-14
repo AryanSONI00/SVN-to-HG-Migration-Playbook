@@ -14,7 +14,7 @@ Mercurial is a **distributed version control system (DVCS)** that is **fast, sca
 - 🤖 **Easy to Use** – Simpler commands than Git.
 - 🔀 **Automatic Merging** – Better branching and merging capabilities.
 
-📸 <img src="images/check-status.png" alt="Mercurial Setup" width="500">
+📸 <img src="images/check status.png" alt="Mercurial Setup" width="500">
 
 
 ---
@@ -27,7 +27,7 @@ Subversion is a **centralized version control system (CVCS)** where all changes 
 - 📁 **Efficient for Large Files** – Handles binary files better than Mercurial.
 - 🔧 **Fine-Grained Permissions** – Allows directory-based permissions.
 
-📸 <img src="images/svn-version.png" alt="Mercurial Setup" width="500">
+📸 <img src="images/svn version.png" alt="Mercurial Setup" width="500">
 
 ---
 
@@ -40,7 +40,7 @@ echo "Hello, Mercurial" > file.txt
 hg add file.txt
 hg commit -m "Added file.txt"
 ```
-📸 <img src="/images/check version and init.png.png" alt="Mercurial Setup" width="500">
+📸 <img src="images/check version and init.png.png" alt="Mercurial Setup" width="500">
 
 
 ### 2️⃣ **Branching & Merging**
@@ -49,14 +49,14 @@ hg branch my-branch
 hg commit -m "created a new branch"
 hg merge my-branch
 ```
-📸  <img src="/images/branch.png" alt="Mercurial Setup" width="500">
+📸  <img src="images/branch.png" alt="Mercurial Setup" width="500">
 
 ### 3️⃣ **Checking Status & Log**
 ```sh
 hg status
 hg log
 ```
-📸 <img src="/images/status and log.png" alt="Mercurial Setup" width="500">
+📸 <img src="images/status and log.png" alt="Mercurial Setup" width="500">
 
 ---
 
