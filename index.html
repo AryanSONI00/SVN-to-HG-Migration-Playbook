@@ -1,0 +1,122 @@
+<h1 id="-version-control-workflow-svn-mercurial-">🎯 <strong>Version Control Workflow: SVN &amp; Mercurial</strong></h1>
+<h2 id="-introduction-">🌟 <strong>Introduction</strong></h2>
+<p>Version control systems (VCS) are essential tools for software development, enabling tracking of changes, collaboration, and efficient management of code. This document provides an insightful comparison of <strong>Mercurial (Hg) 🐍</strong> and <strong>Subversion (SVN) 🏗️</strong>, detailing their workflows, commands, and a comparison to help you choose the best for your project.</p>
+<hr>
+<h2 id="-what-is-mercurial-hg-">🔥 <strong>What is Mercurial (Hg)?</strong></h2>
+<p>Mercurial is a <strong>distributed version control system (DVCS)</strong> that is <strong>fast, scalable, and easy to use</strong>. Unlike SVN, which depends on a central repository, Mercurial allows developers to maintain a full copy of the repository locally.</p>
+<h3 id="-advantages-of-mercurial-">✅ <strong>Advantages of Mercurial</strong></h3>
+<ul>
+<li>🚀 <strong>Distributed Nature</strong> – Every developer has a complete repository copy.</li>
+<li>⚡ <strong>High Performance</strong> – Faster operations compared to SVN.</li>
+<li>🤖 <strong>Easy to Use</strong> – Simpler commands than Git.</li>
+<li>🔀 <strong>Automatic Merging</strong> – Better branching and merging capabilities.</li>
+</ul>
+<p>📸 <img src="images/check status.png" alt="Mercurial Setup" width="500"></p>
+<hr>
+<h2 id="-what-is-subversion-svn-">🏗️ <strong>What is Subversion (SVN)?</strong></h2>
+<p>Subversion is a <strong>centralized version control system (CVCS)</strong> where all changes are stored in a central repository. Developers check out a working copy, make changes, and commit them back to the server.</p>
+<h3 id="-advantages-of-svn-">✅ <strong>Advantages of SVN</strong></h3>
+<ul>
+<li>🔒 <strong>Centralized Control</strong> – Best for teams needing strict version control.</li>
+<li>📁 <strong>Efficient for Large Files</strong> – Handles binary files better than Mercurial.</li>
+<li>🔧 <strong>Fine-Grained Permissions</strong> – Allows directory-based permissions.</li>
+</ul>
+<p>📸 <img src="images/svn version.png" alt="Mercurial Setup" width="500"></p>
+<hr>
+<h2 id="-mercurial-workflow-">🛠️ <strong>Mercurial Workflow</strong></h2>
+<h3 id="1-initializing-a-mercurial-repository-">1️⃣ <strong>Initializing a Mercurial Repository</strong></h3>
+<pre><code class="lang-sh">hg init my_project
+<span class="hljs-keyword">cd</span> my_project
+<span class="hljs-keyword">echo</span> <span class="hljs-string">"Hello, Mercurial"</span> &gt; <span class="hljs-keyword">file</span>.txt
+hg <span class="hljs-built_in">add</span> <span class="hljs-keyword">file</span>.txt
+hg commit -<span class="hljs-keyword">m</span> <span class="hljs-string">"Added file.txt"</span>
+</code></pre>
+<p>📸 <img src="images/check version and init.png" alt="Mercurial Setup" width="500"></p>
+<h3 id="2-branching-merging-">2️⃣ <strong>Branching &amp; Merging</strong></h3>
+<pre><code class="lang-sh">hg branch <span class="hljs-keyword">my</span>-branch
+hg commit -m <span class="hljs-string">"created a new branch"</span>
+hg merge <span class="hljs-keyword">my</span>-branch
+</code></pre>
+<p>📸  <img src="images/branch.png" alt="Mercurial Setup" width="500"></p>
+<h3 id="3-checking-status-log-">3️⃣ <strong>Checking Status &amp; Log</strong></h3>
+<pre><code class="lang-sh">hg <span class="hljs-keyword">status</span>
+hg <span class="hljs-built_in">log</span>
+</code></pre>
+<p>📸 <img src="images/status and log.png" alt="Mercurial Setup" width="500"></p>
+<hr>
+<h2 id="-svn-workflow-">🛠️ <strong>SVN Workflow</strong></h2>
+<h3 id="1-initializing-an-svn-repository-">1️⃣ <strong>Initializing an SVN Repository</strong></h3>
+<pre><code class="lang-sh">svnadmin create <span class="hljs-string">D:</span>\svn
+svn checkout <span class="hljs-string">file:</span><span class="hljs-comment">///D:/svn D:\svn_working_copy</span>
+cd <span class="hljs-string">D:</span>\svn_working_copy
+</code></pre>
+<p>📸 <img src="images/svn version.png" alt="Mercurial Setup" width="500">
+<img src="images/svn checkout.png" alt="Mercurial Setup" width="500"></p>
+<h3 id="2-adding-committing-a-file-">2️⃣ <strong>Adding &amp; Committing a File</strong></h3>
+<pre><code class="lang-sh">echo <span class="hljs-string">"Hello, SVN"</span> &gt; file<span class="hljs-selector-class">.txt</span>
+svn add file<span class="hljs-selector-class">.txt</span>
+svn commit -m <span class="hljs-string">"Added file.txt"</span>
+</code></pre>
+<h3 id="3-creating-the-svn-directory-structure-">3️⃣ <strong>Creating the SVN Directory Structure</strong></h3>
+<pre><code class="lang-sh"><span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$dir</span> <span class="hljs-keyword">in</span> @(<span class="hljs-string">"trunk"</span>, <span class="hljs-string">"branches"</span>, <span class="hljs-string">"tags"</span>)) { <span class="hljs-keyword">mkdir</span> <span class="hljs-variable">$dir</span> }
+svn commit -<span class="hljs-keyword">m</span> <span class="hljs-string">"Created SVN directory structure"</span>
+</code></pre>
+<p>📸 <img src="images/snv branch.png" alt="Mercurial Setup" width="500"></p>
+<h3 id="4-branching-merging-">4️⃣ <strong>Branching &amp; Merging</strong></h3>
+<pre><code class="lang-sh">svn <span class="hljs-keyword">copy</span> <span class="hljs-keyword">file</span>:<span class="hljs-comment">///D:/svn/trunk file:///D:/svn/branches/my-branch -m "Creating my-branch"</span>
+svn <span class="hljs-keyword">merge</span> <span class="hljs-keyword">file</span>:<span class="hljs-comment">///D:/svn/branches/my-branch</span>
+svn commit -<span class="hljs-keyword">m</span> <span class="hljs-string">"Merged my-branch into trunk"</span>
+</code></pre>
+<p>📸 <img src="images/svn merge.png" alt="Mercurial Setup" width="500"></p>
+<hr>
+<h2 id="-mercurial-vs-svn-a-comparison-">⚖️ <strong>🆚 Mercurial vs. SVN: A Comparison</strong></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>🐍 Mercurial (Hg)</th>
+<th>🏗️ Subversion (SVN)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>Distributed (DVCS)</td>
+<td>Centralized (CVCS)</td>
+</tr>
+<tr>
+<td><strong>Branching</strong></td>
+<td>Easy and lightweight</td>
+<td>More complex</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>Faster for local operations</td>
+<td>Slower due to network dependency</td>
+</tr>
+<tr>
+<td><strong>Offline Work</strong></td>
+<td>Fully functional</td>
+<td>Limited without server access</td>
+</tr>
+<tr>
+<td><strong>Merge Handling</strong></td>
+<td>Automatic and efficient</td>
+<td>Manual conflict resolution required</td>
+</tr>
+<tr>
+<td><strong>Setup Complexity</strong></td>
+<td>Simple</td>
+<td>More setup required</td>
+</tr>
+</tbody>
+</table>
+<p>📌 <em>Mercurial is ideal for distributed teams, while SVN works best for controlled environments.</em></p>
+<hr>
+<h2 id="-conclusion-">🎯 <strong>Conclusion</strong></h2>
+<p>Both <strong>Mercurial and SVN</strong> have their strengths and weaknesses, making them suited for different types of projects. If you need a <strong>fast, distributed workflow</strong>, go for <strong>Mercurial</strong>. If you require <strong>strict, centralized control</strong>, <strong>SVN</strong> is the better option.</p>
+<h3 id="-next-steps-">🚀 <strong>Next Steps:</strong></h3>
+<p>✅ Upload this repository to GitHub.<br>✅ Add screenshots inside the <code>screenshots/</code> folder.<br>✅ Experiment with advanced commands like <code>hg rollback</code> and <code>svn revert</code>.  </p>
+<p>📌 <strong>Make sure to add all screenshots before pushing to GitHub!</strong></p>
+<hr>
+<p>✍️ <strong>Author:</strong> Aryan Soni<br>🔥 <em>Happy Version Controlling!</em> 🚀</p>
