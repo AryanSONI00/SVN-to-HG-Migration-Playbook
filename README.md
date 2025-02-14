@@ -116,13 +116,6 @@ svn commit -m "Merged my-branch into trunk"
 ## 🎯 **Conclusion**
 Both **Mercurial and SVN** have their strengths and weaknesses, making them suited for different types of projects. If you need a **fast, distributed workflow**, go for **Mercurial**. If you require **strict, centralized control**, **SVN** is the better option.
 
-### 🚀 **Next Steps:**
-✅ Upload this repository to GitHub.  
-✅ Add screenshots inside the `screenshots/` folder.  
-✅ Experiment with advanced commands like `hg rollback` and `svn revert`.  
-
-📌 **Make sure to add all screenshots before pushing to GitHub!**
-
 ---
 
 ✍️ **Author:** Aryan Soni  
